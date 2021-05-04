@@ -1,6 +1,6 @@
 # Fashion website of brand Ji
 
-Brand Ji is the fashion brand that seeks for its own 
+Brand Ji is the fashion brand that seeks for beautiful casualty and extreme comfortness.
 
 ## Built with...
 
