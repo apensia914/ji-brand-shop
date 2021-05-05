@@ -8,9 +8,14 @@
     <meta name="author" content="Donghoon Han">
     <meta name="description" content="Fashion website of brand Ji">
     {% compress css %}{% endcompress %}
-    <title>{% block title %}Ji | {% endblock title %}</title>
+    <title>{% block title %}Knower | {% endblock title %}</title>
 </head>
 <body>
-    
+    {% include "partials/header.html" %}
+
+    {% block body %}
+    {% endblock body %}
+        
+    {% include "partials/footer.html" %}
 </body>
 </html>
