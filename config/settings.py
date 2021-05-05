@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-APPLICATION_APPS = [
+PROJECT_APPS = [
     "users.apps.UsersConfig",
     "core.apps.CoreConfig",
 ]
@@ -49,7 +49,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-INSTALLED_APPS = THIRDPARTY_APPS + DJANGO_APPS + APPLICATION_APPS 
+INSTALLED_APPS = THIRDPARTY_APPS + DJANGO_APPS + PROJECT_APPS 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +64,12 @@ MIDDLEWARE = [
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+]
 
 ROOT_URLCONF = 'config.urls'
 
@@ -133,12 +139,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+AUTH_USER_MODEL = "users.User"
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
+LOCALE_PATH = [
+    os.path.join(BASE_DIR, "locale")
 ]
