@@ -23,15 +23,15 @@ class User(AbstractUser):
         ("기타", "기타"),
     ]
     
-    main_address = models.CharField(max_length=100, verbose_name="Main address")
-    sub_address = models.CharField(max_length=50, verbose_name="Sub address")
-    zipcode = models.IntegerField(verbose_name="Zip code")
-    phone_num = models.IntegerField(verbose_name="Phone number")
-    mobile_num = models.IntegerField(verbose_name="Mobile phone number")
+    main_address = models.CharField(max_length=100, verbose_name="Main address", blank=True, null=True)
+    sub_address = models.CharField(max_length=50, verbose_name="Sub address", blank=True, null=True)
+    zipcode = models.IntegerField(verbose_name="Zip code", blank=True, null=True)
+    phone_num = models.IntegerField(verbose_name="Phone number", blank=True, null=True)
+    mobile_num = models.IntegerField(verbose_name="Mobile phone number", blank=True, null=True)
     # Bank Info
-    bank_holder = models.CharField(max_length=10, verbose_name="Bank holder's name")
-    bank = models.CharField(max_length=10, verbose_name="Bank name", choices=BANK_CHOICES, default="--은행선택--")
-    bank_account_num = models.CharField(max_length=20, verbose_name="Bank account number")
+    bank_holder = models.CharField(max_length=10, verbose_name="Bank holder's name", blank=True, null=True)
+    bank_name = models.CharField(max_length=10, verbose_name="Bank name", choices=BANK_CHOICES, default="--은행선택--")
+    bank_account_num = models.CharField(max_length=20, verbose_name="Bank account number", blank=True, null=True)
 
     def __str__(self):
         return self.username

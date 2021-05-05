@@ -1,4 +1,5 @@
 {% load compress %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Donghoon Han">
     <meta name="description" content="Fashion website of brand Ji">
-    {% compress css %}{% endcompress %}
-    <title>{% block title %}Knower | {% endblock title %}</title>
+    {% compress css %}
+        <link type="text/x-scss" rel="stylesheet" href="{% static 'scss/_base.scss' %}">
+        {% block style %}{% endblock style %}
+    {% endcompress %}
+    <title>Knower | {% block title %}{% endblock title %}</title>
 </head>
 <body>
     {% include "partials/header.html" %}
@@ -17,5 +21,6 @@
     {% endblock body %}
         
     {% include "partials/footer.html" %}
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
