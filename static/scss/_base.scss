@@ -27,6 +27,7 @@ time, mark, audio, video {
 	font-family: 'Nanum Gothic', sans-serif;
 	color: #111;
 	overflow-x: hidden;
+	text-transform: uppercase;
 }
 
 article, aside, details, figcaption, figure, 
@@ -92,6 +93,26 @@ header {
 
 		.menu-icon {
 			width: 1.9rem;
+		}
+	}
+}
+
+// Footer Section 
+
+footer {
+	max-width: 1600px;
+
+	.footer-wrapper {
+		padding: 1% 1%;
+		width: 100%;
+		height: 20vh;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		text-align: center;
+		font-size: .7rem;
+
+		ul {
+			line-height: 2;
 		}
 	}
 }
