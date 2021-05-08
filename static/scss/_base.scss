@@ -80,6 +80,12 @@ header {
 		justify-content: space-between;
 		align-items: flex-start;
 		position: fixed;
+
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	
 		.logo {
 			width: 2rem;
@@ -113,6 +119,12 @@ footer {
 
 		ul {
 			line-height: 2;
+		}
+
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
