@@ -1,18 +1,17 @@
 <!-- https://github.com/H2D2-Design/h2d2-shopicons/tree/master/PNG/Light -->
 <!-- Header Section -->
 <header>
-    <a href="{% url 'users:home' %}"><img src="../../static/images/ji_logo@2x.png" alt="logo" class="logo"></a>
-    <nav>
-        <a href="#" class="navbar-item">About Us</a>
-        <a href="#" class="navbar-item">Shop</a>
-        <a href="#" class="navbar-item">Collection</a>
-        <a href="#" class="navbar-item">Board</a>
+    <nav id="navbar">
+        <ul class="nav__links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shops</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">Board</a></li>
+        </ul>
+        <a href="#"><img src="../../static/images/logo@2x.png" alt="" class="logo"></a>
+        <ul class="nav__links">
+            <li><a href="#"><img src="../../static/images/account.png" alt="account" class="menu-icon"></a></li>
+            <li><a href="#"><img src="../../static/images/cart.png" alt="cart" class="menu-icon"></a></li>
+        </ul>
     </nav>
-    <div class="navbar-icons">
-        <a href="#"><img src="../../static/images/account.png" alt="account"><span>Account</span></a>
-        <a href="#"><img src="../../static/images/cart.png" alt="cart"><span>Cart</span></a>
-    </div>
-    <div class="hamburger-menu">
-        <div class="hamburger-menuBtn"></div>
-    </div>
 </header>
