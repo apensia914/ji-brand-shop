@@ -1,16 +1,19 @@
 @import "base";
 
-.wrap {
-    width: 300px;
-    height: 200px;
-    border-color: 1px solid black;
-}
+#home {
+    max-width: 1600px;
+    display: flex;
+    z-index: -10;
 
-img {
-    margin-left: 5%;
-}
+    .bg-left,
+    .bg-right {
+        width: 50%;
+        height: 100vh;
+    }
 
-h1 {
-    color: red;
-    font-size: 50px;
+    .bg-right {
+        background-image: url('../images/bg-right@2x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
