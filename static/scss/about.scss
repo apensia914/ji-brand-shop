@@ -1,0 +1,45 @@
+@import "base";
+
+
+    
+.container {
+    padding: 15%;
+
+    #about {
+        max-width: 1600px;
+        height: 80vh;
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5em;
+        }
+        
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+        }
+
+        .profile-image {
+            width: 40%;
+        }
+
+        .profile__brand {
+            width: 40%;
+            h2, span, p {
+                text-transform: none;
+            }
+
+            h2, span {
+                font-weight: bold;
+            }
+
+            p {
+                line-height: 1.5;
+                margin: 5% 0;
+            }
+        }
+    }
+}

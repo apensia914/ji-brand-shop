@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block style %}<link type="text/x-scss" rel="stylesheet" href="{% static 'scss/about.scss' %}">{% endblock style %}
+    
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+    <div class="container">
+        <section id="about">
+            <h1>about</h1>
+            <div class="profile">
+                <img src="../../static/images/bg-left@2x.png" alt="ji's picture" class="profile-image">
+                <div class="profile__brand">
+                    <h2>Knowner:</h2><span>The sustainability, itself.</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quas quo exercitationem dolorum quibusdam accusantium animi corporis enim obcaecati deserunt.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae sunt aliquid quia minima natus repellat omnis, perferendis quam aspernatur provident!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt esse unde alias architecto id tempore, dignissimos quaerat earum illum aliquid!</p>
+                </div>
+            </div>
+        </section>
+    </div>  
+{% endblock body %}
+    
