@@ -4,7 +4,17 @@
     <nav id="navbar">
         <ul class="nav__links">
             <li><a href="{% url 'users:about' %}">About</a></li>
-            <li><a href="#">Shops</a></li>
+            <li class="dropdown"><a href="#">Shops</a></li>
+            <ul class="dropdown__shops dropdown-animation">
+                <li><a href="#">new arrivals</a></li>
+                <li><a href="#">sales</a></li>
+                <li><a href="#">all</a></li>
+                <li><a href="#">outerwear</a></li>
+                <li><a href="#">dresses</a></li>
+                <li><a href="#">tops</a></li>
+                <li><a href="#">bottoms</a></li>
+                <li><a href="#">accessories</a></li>
+            </ul>
             <li><a href="#">Catalog</a></li>
             <li><a href="#">Board</a></li>
         </ul>

@@ -68,6 +68,20 @@ table {
 	border-spacing: 0;
 }
 
+@keyframes dropDown {
+	0% {
+		transform: scaleY(0);
+	}
+
+	80% {
+		transform: scaleY(1.1);
+	}
+
+	100% {
+		transform: scaleY(1);
+	}
+}
+
 // Header Section 
 
 header {
@@ -95,6 +109,41 @@ header {
 			display: flex;
 			flex-direction: column;
 			gap: 1em;
+			position: relative;
+		}
+
+		.dropdown {
+			&:hover {
+				display: block;
+
+				.dropdown__shops {
+					li {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.dropdown__shops {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			display: none;
+
+			&:hover {
+				display: block;
+			}
+
+			li {
+				line-height: 1.5;
+			}
+		}
+
+		.dropdown-animation {
+			display: block;
+			animation: dropDown 300ms ease-in-out forwards;
+			transform-origin: top center;
 		}
 
 		.menu-icon {
